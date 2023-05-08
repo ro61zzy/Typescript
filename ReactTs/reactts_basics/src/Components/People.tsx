@@ -1,11 +1,11 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, FC, useState } from "react";
 // using state with react typescript
 export interface Props {
     location:string
     address:number
 }
-
-export function People ({location, address}: Props) {
+ 
+const People = ({location,address}:Props) => {
     //to accept more than one type
     const [country, setCountry] = useState<string  | null>("")
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +23,9 @@ export function People ({location, address}: Props) {
             )}} /> */}
             <input placeholder="Where do you live...?" onChange={handleChange} />
         {country}
+        <h4>{location}</h4>
+        <h4>{address}</h4>
     </div>
   );
 }
+export default People;

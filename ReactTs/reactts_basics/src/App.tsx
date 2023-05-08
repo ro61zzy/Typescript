@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import "./App.css";
 import { Person } from "./Components/Person";
 
+import { Someone } from "./Components/Someone";
+import People from "./Components/People";
+
 // function App() {
 //   //defining variables
 //   const name: string = "Rozzy";
@@ -25,6 +28,8 @@ import { Person } from "./Components/Person";
 const App: FC = () => {
   return <div className="App">
     <Person name="Rozzy" age ={22} email = "roz@gm.co" />
+    <People location="Las" address={2030} />
+    <Someone />
   </div>;
 }
 
