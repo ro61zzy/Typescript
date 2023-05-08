@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import "./App.css";
+import { Person } from "./Components/Person";
 
 // function App() {
 //   //defining variables
@@ -22,7 +23,9 @@ import "./App.css";
 //Let's use es6 arrow fn to define component
 //defining the type of the fn component, import FC at the top and add it after the name
 const App: FC = () => {
-  return <div className="App">hello eorld</div>;
+  return <div className="App">
+    <Person name="Rozzy" age ={22} email = "roz@gm.co" />
+  </div>;
 }
 
 export default App;
